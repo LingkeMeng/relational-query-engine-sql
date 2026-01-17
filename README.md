@@ -1,5 +1,4 @@
 # relational-query-engine-sql
-## Overview
 A miniature relational database system implementing core DBMS concepts.
 
 Implemented components include:
