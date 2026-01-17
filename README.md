@@ -13,3 +13,26 @@ Implemented components include:
 
 This project emphasizes understanding how relational databases
 execute and guarantee correctness beneath SQL.
+
+# Project Name
+
+## Overview
+Brief description of what the system does.
+
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Technical Highlights
+- Algorithms
+- Data structures
+- System concepts
+
+## Tech Stack
+- Language
+- Tools
+- Environment
+
+## What I Learned
+Short bullet points explaining engineering insight.
