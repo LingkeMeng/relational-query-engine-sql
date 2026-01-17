@@ -1,4 +1,5 @@
 # relational-query-engine-sql
+## Overview
 A miniature relational database system implementing core DBMS concepts.
 
 Implemented components include:
@@ -13,11 +14,6 @@ Implemented components include:
 
 This project emphasizes understanding how relational databases
 execute and guarantee correctness beneath SQL.
-
-# Project Name
-
-## Overview
-Brief description of what the system does.
 
 ## Features
 - Feature 1
