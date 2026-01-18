@@ -2,3 +2,4 @@ node_modules/
 db.js
 settings.json
 charts/
+SP500History.csv
