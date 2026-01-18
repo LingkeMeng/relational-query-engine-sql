@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Friends — Stock Social</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <div class="logo">
+          <span class="dot" aria-hidden="true"></span> Stock Social
+          <span class="tag">Prototype</span>
+        </div>
+        <nav class="right">
+          <a class="btn" href="index.html">Dashboard</a>
+          <a class="btn" href="portfolios.html">Portfolios</a>
+          <a class="btn" href="lists.html">Lists</a>
+          <a class="btn" href="friends.html">Friends</a>
+          <a class="btn" href="auth.html">Sign in / Sign up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container grid grid-2">
+      <section class="card">
+        <h2>Friends & Requests</h2>
+        <form
+          class="row"
+          aria-label="Send friend request"
+          data-action="/api/friends/request"
+        >
+          <input
+            name="email"
+            type="email"
+            placeholder="Friend email"
+            required
+          />
+          <button class="btn" type="submit">Send request</button>
+          <!--span class="muted">After reject/delete, re-request is blocked for 5 minutes.</span-->
+        </form>
+        <div class="hr"></div>
+        <h3>Friends</h3>
+        <table aria-label="Friends list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="friends-body">
+            <tr>
+              <td colspan="3" class="muted">No friends yet</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="card">
+        <h3>Requests Center</h3>
+        <table aria-label="Incoming requests">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="req-in">
+            <tr>
+              <td colspan="3" class="muted">None</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="hr"></div>
+        <table aria-label="Outgoing requests">
+          <thead>
+            <tr>
+              <th>To</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="req-out">
+            <tr>
+              <td colspan="3" class="muted">None</td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

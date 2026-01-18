@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stocks Table</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="bar">
+      <div class="logo">
+        <div class="dot"></div>
+        <span>Stocks</span>
+      </div>
+      <nav class="right">
+        <a class="btn" href="index.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>All Stocks</h2>
+      <p class="muted" style="margin-top:-4px;">Latest 15 records</p>
+
+      <table id="stocks-table">
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Date</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody id="stocks-body">
+          <tr><td colspan="7" class="muted">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="js/stocks.js"></script>
+</body>
+</html>

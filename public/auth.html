@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Auth — Stock Social</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="logo"><span class="dot" aria-hidden="true"></span> CSCC43 Project <span class="tag">Demo</span></div>
+      <nav class="right">
+        <a class="btn" href="index.html">Dashboard</a>
+        <a class="btn" href="portfolios.html">Portfolios</a>
+        <a class="btn" href="lists.html">Lists</a>
+        <a class="btn" href="friends.html">Friends</a>
+        <a class="btn" href="auth.html">Sign in / Sign up</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid grid-2">
+    <aside class="card" id="auth" aria-labelledby="auth-title">
+      <h2 id="auth-title">Sign in / Sign up</h2>
+      <div class="hr"></div>
+      <form aria-label="Sign in form" data-action="/api/auth/login" autocomplete="username">
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="email" required placeholder="name@utoronto.ca" />
+        <label for="login-pass">Password</label>
+        <input id="login-pass" name="password" type="password" required />
+        <div class="row" style="margin-top:8px">
+          <button class="btn primary" type="submit">Sign in</button>
+          <span class="muted">No account yet?</span>
+        </div>
+      </form>
+      <div class="hr"></div>
+      <form aria-label="Sign up form" data-action="/api/auth/register" autocomplete="new-password">
+        <label for="reg-name">Display name</label>
+        <input id="reg-name" name="name" required />
+        <label for="reg-email">Email</label>
+        <input id="reg-email" name="email" type="email" required />
+        <label for="reg-pass">Password</label>
+        <input id="reg-pass" name="password" type="password" required />
+        <div class="row" style="margin-top:8px">
+          <button class="btn" type="submit">Create account</button>
+        </div>
+      </form>
+      <!-- success / error message -->
+      <p id="auth-message" class="muted" style="margin-top:10px"></p>
+      <p class="muted" style="margin-top:10px">After signing in you can access portfolios, lists, comments and friends. Visibility supports private / shared / public.</p>
+    </aside>
+
+    <section class="card">
+      <h2>Why create an account?</h2>
+      <ul class="muted">
+        <li>Track holdings and cash</li>
+        <li>Share lists privately or publicly</li>
+        <li>Comment and collaborate with friends</li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

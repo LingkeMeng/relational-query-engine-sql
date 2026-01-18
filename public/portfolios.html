@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dev</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <div class="bar">
+      <div class="logo"><span class="dot" aria-hidden="true"></span> Dev <span class="tag">demo</span></div>
+      <nav class="right">
+        <a class="btn" href="index.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid grid-2">
+    <section class="card">
+      <h2>Dev operations</h2>
+      <div class="dev-card">
+        <h2 class="dev-title">Add Stock Record</h2>
+      
+        <div class="dev-form-row">
+          <label>Symbol</label>
+          <input id="dev-symbol" class="dev-input" placeholder="symbol">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>Date</label>
+          <input id="dev-date" type="date" class="dev-input">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>Open</label>
+          <input id="dev-open" type="number" step="0.01" class="dev-input">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>High</label>
+          <input id="dev-high" type="number" step="0.01" class="dev-input">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>Low</label>
+          <input id="dev-low" type="number" step="0.01" class="dev-input">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>Close</label>
+          <input id="dev-close" type="number" step="0.01" class="dev-input">
+        </div>
+      
+        <div class="dev-form-row">
+          <label>Volume</label>
+          <input id="dev-volume" type="number" class="dev-input">
+        </div>
+      
+        <button id="dev-add-stock-btn" class="dev-button">Add Stock Record</button>
+      
+        <p id="dev-msg" class="dev-msg"></p>
+      </div>
+  
+      <!-- <div class="dev-card" style="margin-top: 20px;">
+        <h2 class="dev-title">Bulk Upload via CSV</h2>
+      
+        <input type="file" id="csv-file-input" accept=".csv" class="dev-input">
+        <button id="csv-upload-btn" class="dev-button">Upload CSV</button>
+      
+        <p id="csv-msg" class="dev-msg"></p>
+      </div> -->
+      
+
+      
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lists — Stock Social</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <div class="logo">
+          <span class="dot" aria-hidden="true"></span> Stock Social
+          <span class="tag">Prototype</span>
+        </div>
+        <nav class="right">
+          <a class="btn" href="index.html">Dashboard</a>
+          <a class="btn" href="portfolios.html">Portfolios</a>
+          <a class="btn" href="lists.html">Lists</a>
+          <a class="btn" href="friends.html">Friends</a>
+          <a class="btn" href="auth.html">Sign in / Sign up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container grid grid-2">
+      <section class="card">
+        <h2>Stock Lists</h2>
+        <div class="row" style="margin-bottom: 8px">
+          <button class="btn" data-open="#dlg-new-list">New list</button>
+          <span class="muted"
+            >A list contains (symbol, shares). Different users can create
+            identical lists independently.</span
+          >
+        </div>
+        <table aria-label="Lists summary">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Visibility</th>
+              <th>Owner</th>
+              <th>Items</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="lists-body">
+            <tr>
+              <td colspan="5" class="muted">No lists</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="card">
+        <h3>Selected List</h3>
+
+        <div id="list-detail" class="muted">
+          Pick a list to see entries, visibility, and comments.
+        </div>
+        <div id="reviews-section" style="margin-top: 1.5rem">
+          <h4>Reviews</h4>
+          <form id="review-form">
+            <textarea
+              id="review-content"
+              name="content"
+              rows="3"
+              maxlength="4000"
+              placeholder="Write your review…"
+              required
+            ></textarea>
+            <div class="row" style="margin-top: 0.5rem">
+              <button class="btn primary" type="submit">Post / Update</button>
+            </div>
+          </form>
+          <ul
+            id="reviews-list"
+            class="muted"
+            style="margin-top: 0.75rem; padding-left: 1.2rem"
+          >
+            <li>No reviews yet.</li>
+          </ul>
+        </div>
+        <div id="share-section" style="margin-top: 1.5rem">
+          <h4>Share with a friend</h4>
+          <form id="share-form">
+            <select id="share-friend-select" required>
+              <option value="">Select a friend</option>
+            </select>
+            <button class="btn" type="submit">Share</button>
+          </form>
+        </div>
+      </aside>
+    </main>
+
+    <dialog id="dlg-new-list" class="card">
+      <form method="dialog" data-action="/api/lists/create">
+        <h3>New Stock List</h3>
+        <label>Name</label><input name="name" required />
+        <label>Visibility</label>
+        <select name="visibility" required>
+          <option value="private">Private</option>
+          <option value="shared">Shared (selected friends)</option>
+          <option value="public">Public</option>
+        </select>
+        <div class="row" style="margin-top: 10px">
+          <button class="btn primary" value="ok">Create</button>
+          <button class="btn" value="cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

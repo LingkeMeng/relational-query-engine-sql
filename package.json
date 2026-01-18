@@ -1,0 +1,28 @@
+{
+  "name": "25f-cscc43-project",
+  "version": "1.0.0",
+  "description": "Project repo for CSCC43 project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illumin04/25F-CSCC43-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illumin04/25F-CSCC43-project/issues"
+  },
+  "homepage": "https://github.com/illumin04/25F-CSCC43-project#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "ml-regression-simple-linear": "^3.0.1",
+    "pg": "^8.16.3",
+    "quickchart-js": "^3.1.3"
+  }
+}
