@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 25F-CSCC43-project
 
 Project repo for CSCC43 project
@@ -496,3 +497,38 @@ The current sharing logic for stock lists contains several implicit rules that c
 
 3. **Not selecting “Open”, selecting exactly one friend, and choosing “Shared”**  
    In this case, the first list in the user’s collection becomes shared with that friend. This behavior is a side effect of the current implementation and is considered undesirable. It is recommended to avoid relying on this path due to the inconsistent underlying logic.
+=======
+# relational-query-engine-sql
+A miniature relational database system implementing core DBMS concepts.
+
+Implemented components include:
+
+- Relational schema design and normalization (3NF / BCNF)
+- Multi-relation SQL query evaluation
+- Join processing and aggregation
+- Transaction schedules and conflict analysis
+- Two-phase locking (2PL) simulation
+- ACID property analysis
+- Index-based access reasoning
+
+This project emphasizes understanding how relational databases
+execute and guarantee correctness beneath SQL.
+
+## Features
+- Feature 1
+- Feature 2
+- Feature 3
+
+## Technical Highlights
+- Algorithms
+- Data structures
+- System concepts
+
+## Tech Stack
+- Language
+- Tools
+- Environment
+
+## What I Learned
+Short bullet points explaining engineering insight.
+>>>>>>> 3eff7a7495b973d501b77a08efd5353e6b37b3eb
